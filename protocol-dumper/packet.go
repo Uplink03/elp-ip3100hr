@@ -101,7 +101,7 @@ func init() {
 IsReply: {{.IsReply}}
 Byte3: {{.Byte3}} / {{.Byte3 | printf "%02x"}}
 Byte4: {{.Byte4}} / {{.Byte4 | printf "%02x"}}
-SessionID: {{.SessionID}} / 0x{{.SessionID | printf "%8X"}}
+SessionID: {{.SessionID}} / 0x{{.SessionID | printf "%08X"}}
 Bytes8to13: {{.Bytes8to13}} / {{.Bytes8to13 | printf "%02x"}}
 PayloadType: {{.PayloadType}} / {{.PayloadType | printf "%04x"}}
 PayloadLength: {{.PayloadLength}}
