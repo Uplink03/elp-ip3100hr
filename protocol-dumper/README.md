@@ -33,3 +33,23 @@ Each message is dumped in three formats: bin, txt, payload.
 * Bin: The raw on-the-wire message
 * Txt: A text representation of the message for easy inspection
 * Payload: the message with the header stripped; i.e. just the data
+
+## What's the purpose of this?
+
+It started when I wanted to configure a camera I got and the only way to do it
+was through a closed source Windows-only piece of software from the CD shipped
+with the camera. Point of reference: I'm running Linux, I don't have a CD drive,
+and even if I could attempt to run Wine or a Windows VM the software doesn't
+seem to be available for download anywhere.
+
+I'm hoping that one day somebody (if not me) will write some software that can
+do some minimal configuration on these cameras. I can't see all functionality
+being implemented because of at least a few roadblocks:
+
+* the password algorithm is probably crazy and the only way to figure it out
+  is to disassemble the .exe
+* the camera frames don't appear to be encapsulated in a standard format
+  and might as well just be raw H.264
+
+Changing the network settings with the default password should be achievable.
+It would be nice if the password algorithm were found too though.
