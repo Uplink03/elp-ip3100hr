@@ -43,13 +43,7 @@ and even if I could attempt to run Wine or a Windows VM the software doesn't
 seem to be available for download anywhere.
 
 I'm hoping that one day somebody (if not me) will write some software that can
-do some minimal configuration on these cameras. I can't see all functionality
-being implemented because of at least a few roadblocks:
-
-* the password algorithm is probably crazy and the only way to figure it out
-  is to disassemble the .exe
-* the camera frames don't appear to be encapsulated in a standard format
-  and might as well just be raw H.264
+do some minimal configuration on these cameras.
 
 Changing the network settings with the default password should be achievable.
-It would be nice if the password algorithm were found too though.
+To generate a password hash see the `dahua_hash` package in this repository.
