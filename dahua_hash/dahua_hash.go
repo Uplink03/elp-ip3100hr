@@ -19,7 +19,7 @@ func compressor(digest [md5.Size]byte) string {
 
 	for i := 0; i < len(digest); i += 2 {
 		b1, b2 := int(digest[i]), int(digest[i+1]) // stretch to int to prevent wraparound in addition on next line
-		compressed := byte((b1 + b2) % 62)
+		compressed := byte((b1 + b2) % 62)         // the output set has 62 symbols: 0-9A-Za-z
 		if compressed < 10 {
 			// 0..9 => 48..57 aka '0'..'9'
 			compressed += 48
